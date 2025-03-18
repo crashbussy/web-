@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function del(thisa){
+				tr = thisa.parentNode.parentNode;
+				table = tr.parentNode;
+				table.removeChild(tr);
+			}
+		</script>
+	</head>
+	<body>
+		<table id="mytable" align="center" border="80" cellspacing="" cellpadding="9" width="80%">
+			<tr>
+				<td>a</td>
+				<td><a href="#" onclick="del(this)">删除</td>
+			</tr>
+			<tr>
+				<td>b</td>
+				<td><a href="#" onclick="del(this)">删除</td>
+			</tr>
+			<tr>
+				<td>c</td>
+				<td><a href="#" onclick="del(this)">删除</td>
+			</tr>
+			<tr>
+				<td>d</td>
+				<td><a href="#" onclick="del(this)">删除</td>
+			</tr>
+			<tr>
+				<td>e</td>
+				<td><a href="#" onclick="del(this)">删除</td>
+			</tr>
+		</table>
+	</body>
+</html>

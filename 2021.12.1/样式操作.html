@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="pid" style="background-color: red;">hello</p>
+		<!-- 这是html的属性  background-color-->
+		<button type="button" onclick="changeStyle()">换背景</button>
+		<script type="text/javascript">
+			function changeStyle(){
+					
+				document.getElementById('pid').style.backgroundColor="yellow"
+				// 这是css中的属性(DOM的属性) backgroundcolor
+					
+				
+			}
+		</script>
+	</body>
+</html>

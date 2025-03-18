@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="pid">改变元素内容</p>
+		<button type="button" onclick="changeTagContent()">改p元素</button>
+		<script type="text/javascript">
+			function changeTagContent(){
+				document.getElementById('pid').innerHTML='world';
+			}
+			
+		</script>
+		<button type="button" onclick="ss(this)">改自己</button>
+		<script type="text/javascript">
+			function ss(x){
+				x.innerHTML='world'
+			}
+		</script>
+	</body>
+</html>

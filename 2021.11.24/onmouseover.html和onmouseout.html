@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="墨刀.png" onmouseover="bigger(this)" onmouseout="normal(this)">
+		<!-- this指img这个对象，传入函数是个对象，可以对其进行style上的操作 -->
+		<script type="text/javascript">
+			function bigger(x){
+				x.style.height= "70px";
+				x.style.width= "120px";
+			}
+			function normal(x){
+				x.style.height= "500px";
+				x.style.width= "800px";
+			}
+		</script>
+	</body>
+</html>

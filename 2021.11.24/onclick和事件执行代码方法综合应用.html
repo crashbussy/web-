@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<button type="button" onclick="getElementById('demo').innerHTML=Date()">单击</button>
+		<br>
+		<br>
+		
+		<input type="text" name="" id="ss" value="bobosha" onchange="change(this)"/>
+		<script type="text/javascript">
+			function change(x){
+				x.style.backgroundColor="red";
+			}
+		</script>
+		
+		<p id="demo1"></p>
+		<input type="text" name="" id="demo1" value="" onfocus="ccc()"/>
+		<script type="text/javascript">
+			function ccc(){
+				document.getElementById("demo1").innerHTML=Date();
+			}
+		</script>
+	</body>
+</html>

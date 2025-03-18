@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="number" name="" id="bighour" />
+			<input type="button" name="" id="" value="提交" onclick="sss()"/>
+		</form>
+		<script type="text/javascript">
+			function sss(){
+				var hour=document.getElementById("bighour").value;
+				if(hour<=50){
+					var sum=hour*50;
+				}
+				else if(hour<=60&&hour>50){
+					var sum=2500+(hour-50)*60;
+				}
+				else if(hour>60&&hour<=70)
+				{var sum=3100+(hour-50)*60;}
+				document.write(sum);
+			}
+		</script>
+	</body>
+</html>

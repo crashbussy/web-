@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function dian(thisa){
+				nextNode=thisa.nextElementSibling;
+				if(nextNode.style.display=='none'){
+					nextNode.style.display='block'
+				}
+				else{
+					nextNode.style.display='none'
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li class="menu" onclick="dian(this)">导航一</li>
+			<li style="display: none;">
+				<a href="JavaScript:void();">菜单一</a><br>
+				<a href="JavaScript:void();">菜单二</a><br>
+				<a href="JavaScript:void();">菜单三</a><br>
+				<a href="JavaScript:void();">菜单四</a><br>
+			</li>
+			<li class="menu" onclick="dian(this)">导航二</li>
+			<li style="display: none;">
+				<a href="JavaScript:void();">菜单一</a><br>
+				<a href="JavaScript:void();">菜单二</a><br>
+				<a href="JavaScript:void();">菜单三</a><br>
+				<a href="JavaScript:void();">菜单四</a><br>
+			</li>
+			<li class="menu" onclick="dian(this)">导航三</li>
+			<li style="display: none;">
+				<a href="JavaScript:void();">菜单一</a><br>
+				<a href="JavaScript:void();">菜单二</a><br>
+				<a href="JavaScript:void();">菜单三</a><br>
+				<a href="JavaScript:void();">菜单四</a><br>
+			</li>
+			<li class="menu" onclick="dian(this)">导航四</li>
+			<li style="display: none;">
+				<a href="JavaScript:void();">菜单一</a><br>
+				<a href="JavaScript:void();">菜单二</a><br>
+				<a href="JavaScript:void();">菜单三</a><br>
+				<a href="JavaScript:void();">菜单四</a><br>
+			</li>
+		</ul>
+	</body>
+</html>

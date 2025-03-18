@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button" id="butid">点击</button>
+		<script type="text/javascript">
+			var node = document.getElementById('butid')
+			// 移除最近的一个
+			node.addEventListener('click',hello)
+			// 第一个是事件，第二个是方法 调用函数
+			node.addEventListener('click',wwww)
+			// node.removeEventListener('click',wwww)
+			function hello(){
+				alert('hello')
+			}
+			function wwww(){
+				alert('wwww')
+			}
+		</script>
+	</body>
+</html>

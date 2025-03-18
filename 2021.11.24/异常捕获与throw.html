@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="">
+			<input type="text" name="" id="t" value="" placeholder="输入不为空" />
+			<input type="button" name="" id="" value="输入" onclick="check()"/>
+		</form>
+		<script type="text/javascript">
+			function check(){
+				// 异常以及异常处理
+				try{var value = document.getElementById("t").value;
+				if(value=="")throw"空";
+				
+			}catch(x){
+				alert(x);
+			}}
+		</script>
+	</body>
+</html>

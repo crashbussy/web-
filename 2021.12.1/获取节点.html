@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				tagDs=document.getElementsByTagName('p');
+				// tagDs的值等于获取到的个数，这里是p标签的个数4
+				for(i=0;i<tagDs.length;i++){
+					tagDs[i].innerText='标签名访问'+i;
+				}
+			myDiv=document.getElementById('ddd')
+			myDiv.innerText='id访问'+i;
+			
+			
+			nameDiv=document.getElementsByName('byname')
+			for(i=0;i<nameDiv.length;i++){
+				nameDiv[i].innerText='NAME访问'+i;
+			}
+			dclass=document.getElementsByClassName('dclass1')
+			for(i=0;i<dclass.length;i++){
+				dclass[i].innerHTML='class访问'+i;
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p>PPPPPPPPPPPPPPPPP</p>
+		<p></p>
+		<p></p>
+		<div id="ddd">oooooooooohhh</div>
+
+		<!-- hr作用是划一刀横线-->
+		<div name="byname">
+			3333333
+		</div>
+		<div class="dclass1">class</div>
+	</body>
+</html>

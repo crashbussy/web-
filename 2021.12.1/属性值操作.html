@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img id="imgid" src="eg_bulboff.gif" ><br>
+		<button type="button" onclick="changeTag()">开灯</button>
+		<script type="text/javascript">
+			function changeTag(){
+				document.getElementById('imgid').src="eg_bulbon.gif"
+				
+			}
+			
+		</script>
+		<br>
+		<br>
+		<table id="mytable" border="" cellspacing="" cellpadding="">
+			<tr><th>Header</th></tr>
+			<tr><td>Data</td></tr>
+			<tr>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+			</tr>
+			<tr>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+			</tr>
+			<tr>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+			</tr>
+			<tr>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+				<td>ddd</td>
+			</tr>
+		</table>
+		<script type="text/javascript">
+			window.onload=function(){
+				mytable=document.getElementById('mytable')
+				trs= mytable.getElementsByTagName('tr')
+				var flag=true;
+				for(i=0;i<trs.length;i++){
+					if(flag){
+						trs[i].setAttribute('bgcolor', 'red')
+						flag=false
+						
+					}
+					else{
+						flag=true
+					}
+				}
+				ww=mytable.getAttribute('width')
+				
+							}
+		</script>
+	</body>
+</html>
