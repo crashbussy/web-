@@ -1,0 +1,28 @@
+<!-- 不用请求（刷新一次页面，就是一次请求），服务器直接发送（有数据从服务器发过来页面才会刷新），应用在实时监控物流，火灾等 -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="demo">
+			
+		</div>
+		<script type="text/javascript">
+			var div = document.getElementById('demo')
+			var source = new EventSource("http://10.180.65.200:8000")
+			
+			// 这是个无名方法，当有这个事件则触发function
+			source.onopen = function(){
+				div.innerHTML +='<p>Connection open...</p>'
+			}
+			// 被动接收，有就触发
+			source.onmessage = function(){
+				div.innerHTML+=("<p>message: "+event.data+'</p>')
+				
+			}
+			
+		</script>
+	</body>
+</html>
