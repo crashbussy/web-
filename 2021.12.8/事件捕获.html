@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- 捕获，也就是用了监听，触发顺序从外到内，区别于事件冒泡 -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 看以下嵌套alert触发从button到p -->
+		<div >
+			<button type="button">
+				<p>点击捕获</p>
+			</button>
+		</div>
+		<script type="text/javascript">
+			var op=document.querySelector("p")
+			var obutton = document.querySelector("button")
+			
+			op.addEventListener("click", function(){
+				console.log("p元素被点击")
+				window.alert("p元素被点击")
+			},true)
+			obutton.addEventListener("click", function(){
+				console.log("button元素被点击")
+				window.alert("button元素被点击")
+			},true)
+		</script>
+	</body>
+</html>

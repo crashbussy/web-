@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="canvas" width="1000px" height="600px"></canvas>
+		<script type="text/javascript">
+			var canvas = document.getElementById("canvas")
+			var ctx = canvas.getContext("2d")
+			
+			ctx.font = "50px Arial"
+			// ctx.fillText("Wohooooooooooo!",100,50)
+			// ctx.strokeText("fuuuuuuuuuun",100, 100)
+			// 如果不注释掉，只会在开头出现一瞬间，之后会被弹幕占用画布
+			var x=800;
+			setInterval(function(){
+				ctx.clearRect(0,0,600,600)
+				x-=3
+				if(x<-100){
+					x=800
+				}
+				ctx.shadowBlur = 20
+				ctx.shadowColor = "brown"
+				ctx.shadowOffsetY = 10
+				ctx.fillText("bobosha",x,300)
+				// 实心文本
+				ctx.strokeText("susususususu",x,400)
+				// 空心文本
+			},16)
+		</script>
+	</body>
+</html>

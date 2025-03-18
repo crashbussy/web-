@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- alert触发顺序从内到外，注意div和button等标签嵌套，先触发p的aler -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body onclick="bodyClick1()">
+		<div onclick="divClick()">
+			<button type="button" onclick="btnclick()">
+				<p onclick="pclick()">点击冒泡</p>
+			</button>
+		</div>
+		<script type="text/javascript">
+			
+			function btnclick(){
+				console.log("button元素被点击")
+				window.alert("button元素被点击")
+				
+			}
+			function divClick(event){
+				console.log("div被点击")
+				window.alert("div被点击")
+			}
+			function pclick(){
+				console.log("p元素被点击")
+				window.alert("p元素被点击")
+			}
+		</script>
+	</body>
+</html>

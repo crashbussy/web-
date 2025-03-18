@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- 视频放在canva里，就相当于一帧一帧放上去 -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<video width="1300" height="550" src="视频.mp4" autoplay controls preload="auto">
+			<source src="myvideo.mp4" type="video/mp4"></source>
+			<source src="myvideo.ogv" type="video/ogg"></source>
+			<source src="myvideo.webm" type="video/webm"></source>
+			<object width="" height="" type="application/x-shockwave-flash" data="myvideo.swf">
+				<param name="movie" value="myvideo.swf" />
+				<param name="flashvars" value="autostart=true&amp;file=myvideo.swf" />
+			</object>
+			当前浏览器不支持 video直接播放，点击这里下载视频： <a href="myvideo.webm">下载视频</a>
+		</video>
+		<canvas id="canvas" width="600px" height="600px"autoplay controls preload="auto"></canvas>
+		
+		<script type="text/javascript">
+			var video = document.querySelector("video")
+			var canvas = document.getElementById("canvas")
+			var ctx = canvas.getContext("2d")
+			var iterId
+			video.onplay=function(){
+				interId = setInterval(function(){
+					ctx.clearRect(0,0,400,300)
+					ctx.fillRect(0,0,400,300)
+					ctx.drawImage(video,0,0,300,200)
+					
+					ctx.font = "20px 微软雅黑"
+					ctx.strokeStyle = "#0000FF"
+					ctx.strokeText("shuiyin",20,20)
+					
+				},16)
+				video.onpause = function(){
+					clearInterval(interId)
+				}
+			}
+		</script>
+		
+
+	</body>
+</html>

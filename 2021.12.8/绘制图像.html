@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- onload是一个事件，页面加载完毕时触发 -->
+<!-- canvas中有很多值可选，用ctx = canvasElement.getContext("2d")  选中控制2d的部分 -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="猫山王.jpg" >
+		<canvas id="canvas" width="600px" height="600px"></canvas>
+		<script type="text/javascript">
+			var canvasElement = document.getElementById("canvas")
+			var ctx = canvasElement.getContext("2d")
+			var img = new Image()
+			img.src = "猫山王.jpg"
+			img.onload = function(){
+			ctx.drawImage(img,0,0,500,500,10,10,600,600)
+			}
+		</script>
+
+	</body>
+</html>

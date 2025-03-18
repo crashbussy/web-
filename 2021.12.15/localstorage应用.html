@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- 与数据库操作类似 -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				border: 2px dashed green;
+				background-color: #FFEBCD ;
+				width: 320px;
+				text-align: center;
+				margin: 20px
+			}
+		</style>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function save(){
+				var name = document.getElementById("name").value
+				var id = document.getElementById("sid").value
+				localStorage.setItem(id,name)
+				alert("保存成功")
+			}		
+			// 删除数据
+			function del(name){
+				localStorage.removeItem(name)
+				alert("删除成功")
+				
+			}
+			function delall(){
+				localStorage.clear()
+				
+			}
+			function find(){
+				var searchSid = document.getElementById('searchSid').value
+				var searchName = localStorage.getItem(searchSid)
+				document.getElementById('find_return').innerHTML = '查询结果：'+searchName
+				// document操作重点！！！！！！
+				// innerHTML 代指getElementById('find_return')的内容，也就是说，修改.innerHTML的值就是修改其中的内容
+				// document.getElementById('find_return').innerHTML   此结构为，对象.方法.属性!!
+			}
+			</script>
+		<div>
+			<h2>保存数据</h2>
+			<label>姓名：</label>
+			<input type="text" id="name" placeholder="Name"/>
+			<br>
+			<label>学号：</label>
+			<input type="text" id="sid" placeholder="ID" >
+			<br>
+			<button type="button" onclick="save()">保存</button>
+			<button type="button" onclick="delall()">删除所有</button>
+		</div>
+		<div>
+			<h2>查询名字</h2>
+			<label>学号：</label>
+			<input type="text" id="searchSid">
+			<button type="button" onclick="find()">查询</button>
+			<p id="find_return">查询结果：</p>
+		</div>
+	</body>
+</html>
